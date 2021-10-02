@@ -1,35 +1,17 @@
-type Book{
-    title:String,
-    price:Int,
-    isn:String,
-    authors:[String],
-    language:String,
-    publishDate:String,
-    publisher:String,
-    genre:String,
-    subject:String,
-    stock:Int,
-}
-input BookInput {
-    title:String,
-    price:Int,
-    isn:String,
-    authors:[String],
-    language:String,
-    publishDate:String,
-    publisher:String,
-    genre:String,
-    subject:String,
-    stock:Int,
+type Book {
+    Type:String,
+    id:String,
+    title:String
 }
 
-type Query {
-    getAll:[Book],
-    getOne(isn:String!):Book
+type Author {
+    Type:String,
+    id:String,
+    name:String
 }
-type Mutation {
-    addOne(book:BookInput!):String,
-    deleteOne(isn:String!):String,
-    updateOne(book:BookInput):Book,
-    putOrder(isn:String!):String
+
+type User {
+    Type:String,
+    id:String,
+    name:String,
 }

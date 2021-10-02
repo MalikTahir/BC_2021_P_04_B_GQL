@@ -1,5 +1,5 @@
 import * as AWS from "aws-sdk"
-import Book from './Book'
+import Book from '../Types/Book'
 const dbTable = new AWS.DynamoDB.DocumentClient()
 
 export async function addOne (name:any,Item1:Book){

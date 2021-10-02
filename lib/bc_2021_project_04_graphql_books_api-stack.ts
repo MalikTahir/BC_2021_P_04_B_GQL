@@ -3,6 +3,7 @@ import * as lambda from '@aws-cdk/aws-lambda'
 import * as ddb from "@aws-cdk/aws-dynamodb"
 import * as appsync from "@aws-cdk/aws-appsync"
 import { CfnOutput } from '@aws-cdk/core';
+import { SortKeyStep } from '@aws-cdk/aws-appsync';
 
 export class Bc2021Project04GraphqlBooksApiStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
@@ -11,7 +12,11 @@ export class Bc2021Project04GraphqlBooksApiStack extends cdk.Stack {
     // Creating data table
     const ddbTable = new ddb.Table(this,"BC_2021_GQL_Table",{
     partitionKey:{
-      name:"isn",
+      name:"Type",
+      type:ddb.AttributeType.STRING
+    },
+    sortKey:{
+      name:"id",
       type:ddb.AttributeType.STRING
     }
     })
@@ -37,27 +42,6 @@ export class Bc2021Project04GraphqlBooksApiStack extends cdk.Stack {
       fieldName:"getAll"
     })
 
-    dataSource.createResolver({
-      typeName:"Query",
-      fieldName:"getOne"
-    })
 
-    dataSource.createResolver({
-      typeName:"Mutation",
-      fieldName:"addOne"
-    })
-    dataSource.createResolver({
-      typeName:"Mutation",
-      fieldName:"deleteOne"
-    })
-
-    dataSource.createResolver({
-      typeName:"Mutation",
-      fieldName:"updateOne"
-    })
-
-    new CfnOutput(this,"GQL URL :",{
-      value:api.graphqlUrl
-    })
   }
 }

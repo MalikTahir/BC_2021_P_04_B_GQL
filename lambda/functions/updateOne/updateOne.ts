@@ -1,7 +1,7 @@
 import * as AWS from "aws-sdk"
 import { table } from "console"
 const ddbTable = new AWS.DynamoDB.DocumentClient()
-import Book from './Book'
+import Book from '../Types/Book'
 type ParamInput = {
     TableName: string ,
     Key:{},
@@ -35,7 +35,7 @@ export default async function updateOne(name:any,Item1:any) {
     }
     try{
         const res = await ddbTable.update(params).promise()
-        return res;
+        return res
     }catch(error){
         return error
     }
