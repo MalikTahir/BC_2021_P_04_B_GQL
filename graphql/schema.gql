@@ -26,22 +26,44 @@ type User {
 	Type: String
 	id: String
 	name: String
+    orders:[String]
 }
 
 input UserInput {
 	Type: String
 	id: String
 	name: String
+    orders:[String]
+}
+
+type Order {
+    Type:String,
+    id:String,
+    userId:String,
+    books:[String],
+    total:Int,
+    status:String
+}
+
+input OrderInput {
+    Type:String,
+    id:String,
+    userId:String,
+    books:[String],
+    total:Int
+    status:String
 }
 
 type Mutation {
 	addBook(book: BookInput): Book
 	addAuthor(author: AuthorInput): Author
 	addUser(user: UserInput): User
+    addOrder(order:OrderInput): Order
 }
 
 type Query {
 	getBook(id: String): Book
 	getAuthor(id: String): Author
 	getUser(id: String): User
+    getOrder(id:String):Order
 }

@@ -50,6 +50,10 @@ export class Bc2021Project04GraphqlBooksApiStack extends cdk.Stack {
       fieldName:"getUser"
     });
     dataSource.createResolver({
+      typeName:"Query",
+      fieldName:"getOrder"
+    });
+    dataSource.createResolver({
       typeName:"Mutation",
       fieldName:"addBook"
     });
@@ -60,6 +64,10 @@ export class Bc2021Project04GraphqlBooksApiStack extends cdk.Stack {
     dataSource.createResolver({
       typeName:"Mutation",
       fieldName:"addUser"
+    });
+    dataSource.createResolver({
+      typeName:"Mutation",
+      fieldName:"addOrder"
     });
 
 
