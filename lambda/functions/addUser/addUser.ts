@@ -9,7 +9,7 @@ export default async function addAuthor(name:any,user:User) {
     }
     try{
         const res = ddbTable.put(params).promise()
-        return res
+        return (await res).Attributes
     }catch(error){
         return error
     }

@@ -9,7 +9,6 @@ import updateOne from './functions/updateOne/updateOne'
 import addAuthor from "./functions/addAuthor/addAuthor"
 import addUser from "./functions/addUser/addUser"
 import Author from "./functions/Types/Author"
-import { anything } from "@aws-cdk/assert"
 import getAuthor from "./functions/getAuthor/getAuthor"
 import getUser from "./functions/getUser/getUser"
 import User from "./functions/Types/User"

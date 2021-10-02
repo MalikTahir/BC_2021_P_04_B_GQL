@@ -1,58 +1,47 @@
-type Book {
-    Type:String,
-    id:String,
-    title:String
-}
-
 type Author {
-    Type:String,
-    id:String,
-    name:String
-}
-
-type User {
-    Type:String,
-    id:String,
-    name:String,
-}
-type BookOrder{
-        bookId:String,
-        quantity:number,
-        amount:number
-    }
-type Order {
-    Type:String,
-    id:String,
-    userId:String,
-    books:[BookOrder]
-    Status:String
-}
-input BookInput {
-    Type:String,
-    id:String,
-    title:String
+	Type: String
+	id: String
+	name: String
 }
 
 input AuthorInput {
-    Type:String,
-    id:String,
-    name:String
+	Type: String
+	id: String
+	name: String
+}
+
+type Book {
+	Type: String
+	id: String
+	title: String
+}
+
+input BookInput {
+	Type: String
+	id: String
+	title: String
+}
+
+type User {
+	Type: String
+	id: String
+	name: String
 }
 
 input UserInput {
-    Type:String,
-    id:String,
-    name:String,
-}
-
-type Query {
-    getBook(id:String):Book,
-    getAuthor(id:String):Author,
-    getUser(id:String):User,
+	Type: String
+	id: String
+	name: String
 }
 
 type Mutation {
-    addBook(book:BookInput):Book,
-    addAuthor(author:AuthorInput):Author,
-    addUser(user:UserInput):User,
+	addBook(book: BookInput): Book
+	addAuthor(author: AuthorInput): Author
+	addUser(user: UserInput): User
+}
+
+type Query {
+	getBook(id: String): Book
+	getAuthor(id: String): Author
+	getUser(id: String): User
 }
