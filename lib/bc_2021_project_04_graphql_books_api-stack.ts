@@ -69,7 +69,22 @@ export class Bc2021Project04GraphqlBooksApiStack extends cdk.Stack {
       typeName:"Mutation",
       fieldName:"addOrder"
     });
-
+    dataSource.createResolver({
+      typeName:"Mutation",
+      fieldName:"deleteBook"
+    })
+    dataSource.createResolver({
+      typeName:"Mutation",
+      fieldName:"deleteAuthor"
+    })
+    dataSource.createResolver({
+      typeName:"Mutation",
+      fieldName:"deleteOrder"
+    })
+    dataSource.createResolver({
+      typeName:"Mutation",
+      fieldName:"deleteUser"
+    })
 
   }
 }

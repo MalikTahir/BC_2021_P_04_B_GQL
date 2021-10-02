@@ -56,9 +56,13 @@ input OrderInput {
 
 type Mutation {
 	addBook(book: BookInput): Book
+    deleteBook(id:String):String
 	addAuthor(author: AuthorInput): Author
+    deleteAuthor(id:String):String
 	addUser(user: UserInput): User
+    deleteUser(id:String):String
     addOrder(order:OrderInput): Order
+    deleteOrder(id:String):String
 }
 
 type Query {
