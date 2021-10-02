@@ -1,7 +1,8 @@
 import BookByAuth from './bookByAuth'
 type Author ={
+    Type:string,
     id:string,
     name:string,
-    books:[BookByAuth]
+    
 }
 export default Author

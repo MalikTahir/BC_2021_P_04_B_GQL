@@ -2,7 +2,7 @@ import * as AWS from "aws-sdk"
 import Book from '../Types/Book'
 const dbTable = new AWS.DynamoDB.DocumentClient()
 
-export async function addOne (name:any,Item1:Book){
+export async function addBook (name:any,Item1:Book){
 
     const params = {
         TableName:name,

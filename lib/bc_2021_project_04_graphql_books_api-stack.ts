@@ -39,8 +39,27 @@ export class Bc2021Project04GraphqlBooksApiStack extends cdk.Stack {
 
     dataSource.createResolver({
       typeName:"Query",
-      fieldName:"getAll"
-    })
+      fieldName:"getBook"
+    });
+    dataSource.createResolver({
+      typeName:"Query",
+      fieldName:"getAuthor"
+    });
+    dataSource.createResolver({
+      typeName:"Query",
+      fieldName:"getUser"
+    });
+    dataSource.createResolver({
+      typeName:"Mutation",
+      fieldName:"addBook"
+    });
+    dataSource.createResolver({
+      typeName:"Mutation",
+      fieldName:"addAuthor"
+    });dataSource.createResolver({
+      typeName:"Mutation",
+      fieldName:"addUser"
+    });
 
 
   }

@@ -1,11 +1,12 @@
 import * as AWS from "aws-sdk"
 const dbTable = new AWS.DynamoDB.DocumentClient()
 
-export const getOne = async (name:any,isn:string)=>{
+export const getBook = async (name:any,isn:string)=>{
     const params = {
         TableName:name,
         Key:{
-            isn:isn
+            Type:"Book",
+            id:isn
         }
     }
     try {

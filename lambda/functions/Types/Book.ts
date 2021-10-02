@@ -1,14 +1,7 @@
 type Book = {
-    title:string,
-    price:number,
-    isn:string,
-    authors:string[],
-    language:string,
-    publishDate:string,
-    publisher:string,
-    genre:string,
-    subject:string,
-    stock:number,
+    Type:string,
+    id:string,
+    title:string
 }
 
 export default Book
