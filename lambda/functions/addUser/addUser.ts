@@ -1,8 +1,8 @@
 import * as AWS from "aws-sdk"
-import User from "../Types/User"
+import User from "../../Types/User"
 const ddbTable = new AWS.DynamoDB.DocumentClient()
 
-export default async function addAuthor(name:any,user:User) {
+export default async function addUser(name:any,user:User) {
     const params = {
         TableName:name,
         Item:user

@@ -1,7 +1,7 @@
 import *as AWS from "aws-sdk"
 const dbTable = new AWS.DynamoDB.DocumentClient()
 
-export  const deleteBook = async (name:any,isn:string)=>{
+export default async function deleteBook (name:any,isn:string){
 
     const params ={
         TableName : name,

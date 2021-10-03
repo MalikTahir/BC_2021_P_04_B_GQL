@@ -1,7 +1,7 @@
 import * as AWS from "aws-sdk"
 const dbTable = new AWS.DynamoDB.DocumentClient()
 
-export const getBook = async (name:any,isn:string)=>{
+export default async function getBook(name:any,isn:string){
     const params = {
         TableName:name,
         Key:{

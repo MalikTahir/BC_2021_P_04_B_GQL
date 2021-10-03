@@ -1,5 +1,5 @@
 import * as AWS from "aws-sdk"
-import Author from "../Types/Author"
+import Author from "../../Types/Author"
 const ddbTable = new AWS.DynamoDB.DocumentClient()
 
 export default async function addAuthor(name:any,author:Author) {

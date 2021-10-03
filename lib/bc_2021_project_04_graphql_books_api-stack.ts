@@ -120,6 +120,10 @@ export class Bc2021Project04GraphqlBooksApiStack extends cdk.Stack {
       typeName:"Mutation",
       fieldName:"updateOrder"
     })
+    dataSource.createResolver({
+      typeName:"Mutation",
+      fieldName:"updateOrderStatus"
+    })
 
   }
     

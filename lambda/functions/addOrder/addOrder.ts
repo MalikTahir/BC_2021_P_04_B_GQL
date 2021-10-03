@@ -1,8 +1,8 @@
 import * as AWS from "aws-sdk"
-import Order from "../Types/Order"
+import Order from "../../Types/Order"
 const ddbTable = new AWS.DynamoDB.DocumentClient()
 
-export default async function addAuthor(name:any,order:Order) {
+export default async function Order(name:any,order:Order) {
     const params = {
         TableName:name,
         Item:order

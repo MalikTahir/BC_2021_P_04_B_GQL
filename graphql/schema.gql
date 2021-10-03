@@ -67,6 +67,7 @@ type Mutation {
     addOrder(order:OrderInput): Order
     deleteOrder(id:String):String
     updateOrder(order:OrderInput):String
+    updateOrderStatus(id:String,status:String):String
 
 }
 

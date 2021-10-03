@@ -8,7 +8,7 @@ type ParamInput = {
     UpdateExpression: string,
     ReturnValues: string
 }
-export default async function updateBook(name:any,Item1:any) {
+export default async function updateAuthor(name:any,Item1:any) {
 
     let params:ParamInput = {
         TableName:name,
